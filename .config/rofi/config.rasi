@@ -1,0 +1,76 @@
+ configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: " ";
+    drun-display-format: "{name}";
+    font: "Inter Extra Bold 13";
+}
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+window {
+    width: 35%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px;
+    border-color: @color1;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    margin: 0 0 15px 0;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @color1;
+    margin: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Buscar...";
+    placeholder-color: rgba(255, 255, 255, 0.2);
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 6;
+    spacing: 8px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @foreground;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-color: @color1;
+}
+
+element-icon {
+    size: 32px;
+    padding: 0 15px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

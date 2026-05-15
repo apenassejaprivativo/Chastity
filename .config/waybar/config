@@ -1,0 +1,49 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 45,
+
+    "modules-left": ["clock", "custom/media"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "hyprland/workspaces", "pulseaudio#microphone"],
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 20, // 👈 Isso impede que o título da janela empurre o resto
+        "separate-outputs": true
+    },
+"clock": {
+
+    "format": "     {:%I:%M:%S %p}", //
+
+    "interval": 1,
+
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+
+},
+"custom/media": {
+    "format": "  {}",
+    "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+    "interval": 1,
+    "max-length": 30
+},
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "persistent-workspaces": {
+            "1": [], "2": [], "3": [], "4": []
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "tooltip": false
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}

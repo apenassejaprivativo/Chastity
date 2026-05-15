@@ -1,0 +1,39 @@
+[global]
+    # Fonte que você curte (Garante que a Inter esteja instalada)
+    font = Inter Extra Bold 11
+
+    # Geometria (Sem parênteses, pae!)
+    width = 350
+    height = 110
+    offset = 20x20
+    origin = top-right
+
+    # Estética
+    padding = 15
+    horizontal_padding = 15
+    frame_width = 2
+    corner_radius = 12
+
+    # Cores (Dica: depois linkamos com o pywal)
+    background = "#000000b3"
+    foreground = "#ffffff"
+    frame_color = "#ffffff33"
+
+    # Comportamento
+    stack_duplicates = true
+    hide_duplicate_count = true
+    icon_position = left
+    min_icon_size = 64
+    max_icon_size = 64
+
+    history_ignore = no
+
+[spotify_rule]
+    appname = "Spotify*"
+    set_stack_tag = "spotify_notif"
+
+[gpu_recorder_rule]
+    appname = "Sistema"
+
+[captura_rule]
+    summary = "Captura"

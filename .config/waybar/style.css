@@ -1,0 +1,67 @@
+
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#waybar > box {
+background-color: rgba(0, 0, 0, 0.3);
+margin: 10px 20px;
+border-radius: 12px;
+padding: 8px 25px;
+}
+
+#clock {
+color: @color1;
+margin-right: 15px;
+}
+
+#custom-media {
+color: @color2;
+}
+
+#window {
+color: @color3;
+}
+
+#workspaces {
+margin-right: 8px; /* 👈 espacinho leve */
+}
+
+#workspaces button {
+color: @color4;
+opacity: 0.5;
+padding: 0 10px; /* 👈 leve espaço interno */
+}
+
+#workspaces button.active {
+color: @color1;
+opacity: 1;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 8px;
+}
+
+/* MICROFONE */
+#pulseaudio.microphone {
+color: @color5;
+margin-right: 8px; /* 👈 espaço entre mic e tray */
+}
+
+#pulseaudio.microphone.muted {
+color: #ff5555;
+}
+
+#tray {
+color: @color6;
+margin-right: 8px; /* 👈 mantém padrão de espaçamento */
+}
